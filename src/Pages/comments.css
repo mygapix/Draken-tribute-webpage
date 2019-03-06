@@ -1,0 +1,36 @@
+ul {
+  list-style: none;
+}
+
+.commentContainer{
+  text-align: center;
+
+}
+.textInput {
+  width: 70%;
+  height: 30px;
+
+}
+.btn {
+font-size: 20px;
+background-color: red;
+}
+
+.note {
+  background: red;
+  cursor: pointer;
+  color: blue;
+  transition: transform .2s ease;
+}
+
+#list {
+  color: black;
+  font-weight: 700;
+  font-family: 'Jura', sans-serif;
+  margin-left:  14%;
+  margin-right: 14%;
+  margin-top: 5px;
+  text-align: left;
+  width: inherit;
+  list-style: none;
+}
