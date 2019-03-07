@@ -15,6 +15,7 @@ class App extends Component {
           <Route path="/about" component={About}/>
           <Route path="/gallery" component={Gallery}/>
           <Route path="/comments" component={Comments}/>
+          <Route path={process.env.PUBLIC_URL + '/'}>
         </div>
       </Router>
     );
