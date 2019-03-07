@@ -15,11 +15,18 @@ class App extends Component {
           <Route path="/about" component={About}/>
           <Route path="/gallery" component={Gallery}/>
           <Route path="/comments" component={Comments}/>
-          <Route path={process.env.PUBLIC_URL + '/'}>
         </div>
       </Router>
     );
   }
 }
 
-export default App;
+export default App () => (
+  <Router history={browserHistory} onUpdate={logPageView}>
+    <Route path='/' component={App}>
+      <IndexRoute component={Home} />
+    </Route>
+    <Route path='*' component={Page404} />
+    <Route path={process.env.PUBLIC_URL + '/'}>
+  </Router>
+);
