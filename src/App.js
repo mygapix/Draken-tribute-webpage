@@ -21,12 +21,4 @@ class App extends Component {
   }
 }
 
-export default App () => (
-  <Router history={browserHistory} onUpdate={logPageView}>
-    <Route path='/' component={App}>
-      <IndexRoute component={Home} />
-    </Route>
-    <Route path='*' component={Page404} />
-    <Route path={process.env.PUBLIC_URL + '/'}>
-  </Router>
-);
+export default App;
