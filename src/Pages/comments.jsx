@@ -3,7 +3,6 @@ import Navbar from '../components/navbar.jsx';
 import Footer from '../components/footer.jsx';
 import Jumbotron from '../components/jumbotron.jsx';
 import './comments.css';
-import AddIcon from '@material-ui/icons/Add';
 
 class Comments extends Component {
   constructor(props) {
@@ -60,10 +59,19 @@ class Comments extends Component {
           />
           <div
             className="btn"
-            onClick={ ()=> this.addNotes(this.state.userInput)}><i className="far fa-arrow-alt-circle-right"></i>
+            onClick={ ()=> this.addNotes(this.state.userInput)}>
+            <i className="far fa-arrow-alt-circle-right">
+            </i>
           </div>
           <div id="list">
-            {this.state.list.map( (val) => <li>{val}<button className="delNote" onClick= {()=> this.deleteNote()}><i class="far fa-trash-alt"></i></button></li>)}
+            {this.state.list.map(
+              (val) =>
+              <li>{val}<button className="delNote" onClick= {()=> this.deleteNote()}>
+                <i
+                  class="far fa-trash-alt">
+                </i>
+                </button>
+              </li>)}
           </div>
         </div>
         <Footer />
