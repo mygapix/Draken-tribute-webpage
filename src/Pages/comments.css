@@ -12,10 +12,17 @@ ul {
 
 }
 .btn {
-font-size: 20px;
-background-color: red;
+font-size: 25px;
+background-color: #6298ef;
+color: white;
+width: 30px;
+height: 30px;
+text-align: center;
 }
 
+.fa-arrow-alt-circle-right {
+
+}
 .note {
   background: red;
   cursor: pointer;
@@ -23,6 +30,12 @@ background-color: red;
   transition: transform .2s ease;
 }
 
+.delNote {
+  width: 30px;
+  height: 30px;
+  background-color: #6298ef;
+  color: white;
+}
 #list {
   color: black;
   font-weight: 700;

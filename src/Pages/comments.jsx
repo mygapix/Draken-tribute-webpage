@@ -50,22 +50,22 @@ class Comments extends Component {
       <div>
         <Navbar />
         <Jumbotron title="Add comments " subtitle=" ." />
-          <div className="commentContainer">
-              <input type="text"
-              ref={((input) => {this.textInput = input})}
-              className="textInput"
-              value={this.state.userInput}
-              onChange={(e) => this.updateNoteText(e.target.value)}
-              onKeyPress={this.handleKeyProcess.bind(this)}
-            />
-            <div
-              className="btn"
-              onClick={ ()=> this.addNotes(this.state.userInput)}><AddIcon />
-            </div>
-            <div id="list">
-              {this.state.list.map( (val) => <li>{val}<button className="delNote" onClick= {()=> this.deleteNote()}>X</button></li>)}
-            </div>
+        <div className="commentContainer">
+          <input type="text"
+          ref={((input) => {this.textInput = input})}
+          className="textInput"
+          value={this.state.userInput}
+          onChange={(e) => this.updateNoteText(e.target.value)}
+          onKeyPress={this.handleKeyProcess.bind(this)}
+          />
+          <div
+            className="btn"
+            onClick={ ()=> this.addNotes(this.state.userInput)}><i className="far fa-arrow-alt-circle-right"></i>
           </div>
+          <div id="list">
+            {this.state.list.map( (val) => <li>{val}<button className="delNote" onClick= {()=> this.deleteNote()}><i class="far fa-trash-alt"></i></button></li>)}
+          </div>
+        </div>
         <Footer />
       </div>
     );
